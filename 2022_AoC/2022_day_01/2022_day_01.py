@@ -1,9 +1,9 @@
 elves = []
 
 
-def get_total_calories_maximum():
+def get_total_calories_maximum(data='2022_day_01_input.txt'):
     food_calories = 0
-    with open('2022_day_01_input.txt', encoding='utf-8') as f:
+    with open(data, encoding='utf-8') as f:
         for line in f:
             if line.rstrip() != '':
                 food_calories += int(line.rstrip())

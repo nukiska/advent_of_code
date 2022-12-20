@@ -2,9 +2,9 @@ kamen_papir_nuzky = {'X': 1, 'Y': 2, 'Z': 3}
 vysledek_kola = {'prohra': ('A Z', 'B X', 'C Y'), 'remiza': ('A X', 'B Y', 'C Z'), 'vyhra': ('A Y', 'B Z', 'C X')}
 
 
-def spocitej_skore_bez_znalosti_strategie():
+def spocitej_skore_bez_znalosti_strategie(data='2022_day_02_input.txt'):
     skore = 0
-    with open('2022_day_02_input.txt', encoding='utf-8') as f:
+    with open(data, encoding='utf-8') as f:
         for line in f:
             tah = line.rstrip()
             skore += kamen_papir_nuzky[tah[2]]
@@ -24,9 +24,9 @@ def skoncit_ocekavanym_vysledkem(volba_soupere, ocekavany_vysledek):
     return pocet_bodu
 
 
-def spocitej_skore_se_znalosti_strategie():
+def spocitej_skore_se_znalosti_strategie(data='2022_day_02_input.txt'):
     nove_skore = 0
-    with open('2022_day_02_input.txt', encoding='utf-8') as f:
+    with open(data, encoding='utf-8') as f:
         for line in f:
             tah = line.rstrip()
             match tah[2]:
