@@ -6,10 +6,7 @@ def rozdel_batoh_napul(obsah_batohu: str):
 
 
 def vrat_prioritu(pismeno):
-    if pismeno.islower():
-        return ord(pismeno) - 96
-    elif pismeno.isupper():
-        return ord(pismeno) - 38
+    return ord(pismeno) - 96 if pismeno.islower() else ord(pismeno) - 38
 
 
 def spocitej_prioritu_polozky(polozky):
@@ -26,26 +23,9 @@ def secti_priority_polozek(radky_souboru):
     return soucet
 
 
-# data='2022_day_03_input_test.txt'
-# def spocitej_soucet_priorit_typu_predmetu(data='2022_day_03_input.txt'):
-#     soucet = 0
-
-# with open(data, encoding='utf-8') as f:
-#     for line in f:
-#         neco = set(line.rstrip())
-# print(radek)
-# predmet = list(prihradka1.intersection(prihradka2))[0]
-# soucet += spocitej_prioritu(predmet)
-
-# return radek
-
-
 if __name__ == '__main__':
     with open('2022_day_03_input.txt') as f:
         lines = f.read().splitlines()
 
     # task 1
     print(secti_priority_polozek(lines))
-
-#     # task 2
-#     print(spocitej_soucet_priorit_typu_predmetu())
