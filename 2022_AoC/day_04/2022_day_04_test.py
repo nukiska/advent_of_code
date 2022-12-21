@@ -30,5 +30,11 @@ def test_existuje_pokryty_usek():
     assert day_04.existuje_pokryty_usek(({2, 3, 4}, {8, 6, 7})) == 0
 
 
-def test_spocitej_pocet_pokrytych_useku():
-    assert day_04.spocitej_pocet_pokrytych_useku(lines) == 2
+def test_spocitej_pocet_pokrytych_useku_a_spolecnych_sekci():
+    assert day_04.spocitej_pocet_pokrytych_useku_a_spolecnych_sekci(lines)[0] == 2
+    assert day_04.spocitej_pocet_pokrytych_useku_a_spolecnych_sekci(lines)[1] == 4
+
+
+def test_existuji_spolecne_sekce():
+    assert day_04.existuji_spolecne_sekce({6}, {4, 5, 6}) == 1
+    assert day_04.existuji_spolecne_sekce({12, 13}, {15, 16, 17}) == 0
